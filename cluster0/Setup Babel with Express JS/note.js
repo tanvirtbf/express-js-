@@ -26,3 +26,25 @@
 
 // How to install that 3 package ? 
 // npm install @babel/core @babel/cli @babel/preset-env
+
+
+// Babel CLI : 
+
+// compile files : 
+// jodi amar kase index.js file thake jetay latest js code ase tahole seta ke amake browser competible code e convert korte hobe.
+
+// how to compile files?
+// npx babel index.js -- It compiles index.js file
+
+// jodi complied file er code onno kothau onno kono file e rakhte chai tahole?
+// npx babel index.js --out-file index-compiled.js --- It compiles index.js file and output to a file index-compiled.js. We can use --out-file or -o
+
+// jodi erokom chai je compiled file er code onno kothau onno file e rakhbo + jokhon main file e kono kisu change hobe sathe sathe automatic updated code ta compiled hoye sei jaygay chole jabe tahole??
+// npx babel index.js --watch --out-file index-compiled.js --- It compiles index.js every time we make changes and output to a file index-compiled.js . We can use --watch or -w
+
+
+// Compile Directory or Folder
+
+// npx babel src --out-dir prd --- It compiles the entire src directory and output it to the prd directory by using either --out-dir or -d. This doesn't overwrite any other files or directories in lib.
+
+// npx babel src --out-file index-compiled.js --- It compiles the entire src directory and output it as a single concatenated file (pura source code er folder ke compiled kore single file kora)
