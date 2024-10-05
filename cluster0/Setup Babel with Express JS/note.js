@@ -48,3 +48,23 @@
 // npx babel src --out-dir prd --- It compiles the entire src directory and output it to the prd directory by using either --out-dir or -d. This doesn't overwrite any other files or directories in lib.
 
 // npx babel src --out-file index-compiled.js --- It compiles the entire src directory and output it as a single concatenated file (pura source code er folder ke compiled kore single file kora)
+
+
+// Setup Babel : 
+
+// 1. Install All Required Babel Packages
+// npm install @babel/core @babel/cli @babel/preset-env
+// (dev dependencies mood e install kora uchit . karon production e babel use hobe na)
+
+// 2. Create a file called .babelrc at the root directory of Project and write this line -- { "presets": ["@babel/preset-env"] } or { "presets": ["@babel/env"] }
+
+// 3. Open package.json file and write..
+// "scripts":{
+//   "build":"babel index.js --out-file prd",
+//   "start":"npm run build && nodemon prd/index.js",
+//   "serve":"node prd/index.js"
+// }
+
+ 
+
+
