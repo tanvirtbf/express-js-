@@ -68,6 +68,25 @@ const port = process.env.PORT || '3000'
 // app.get('/',[callback1,callback2,callback3,callback4])
 
 
+// Combination of Independent function and array of functions
+// const callback1 = (req,res,next)=>{
+//   console.log('First Callback')
+//   next()
+// }
+// const callback2 = (req,res,next)=>{
+//   console.log('Second Callback')
+//   next()
+// }
+// const callback3 = (req,res,next)=>{
+//   console.log('Third Callback')
+//   next()
+// }
+// const callback4 = (req,res,next)=>{
+//   console.log('Fourth Callback')
+// }
+// app.get('/', [callback1,callback2,callback3,callback4], (req,res)=>{
+//   res.send('Combined!')
+// })
 
 
 
