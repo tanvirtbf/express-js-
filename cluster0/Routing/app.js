@@ -34,15 +34,42 @@ const port = process.env.PORT || '3000'
 // })
 
 // Multiple Callback 
-app.get('/', (req,res,next)=>{
-  res.send('Hello Worldss!')
-  next()
-}, (req,res, next)=>{
-  console.log('Second Callback')
-  next()
-}, (req,res)=>{
-  console.log('final clg')
-})
+// app.get('/', (req,res,next)=>{
+//   res.send('Hello Worldss!')
+//   next()
+// }, (req,res, next)=>{
+//   console.log('Second Callback')
+//   next()
+// }, (req,res)=>{
+//   console.log('final clg')
+// })
+
+// Array of Callback 
+
+// const callback1 = (req,res,next)=>{
+//   console.log('First Callback')
+//   next()
+// }
+
+// const callback2 = (req,res,next)=>{
+//   console.log('Second Callback')
+//   next()
+// }
+
+// const callback3 = (req,res,next)=>{
+//   console.log('Third Callback')
+//   next()
+// }
+
+// const callback4 = (req,res)=>{
+//   res.send('Callback Finished!')
+// }
+
+// app.get('/',[callback1,callback2,callback3,callback4])
+
+
+
+
 
 
 app.listen(port, ()=>{
