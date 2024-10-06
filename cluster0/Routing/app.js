@@ -89,7 +89,43 @@ const port = process.env.PORT || '3000'
 // })
 
 
+// Chained Route Callbacks
+// app.route(path) - It returns an instance of a single route, which you can then use to handle HTTP verbs with optional middleware. Use app.route() to avoid duplicate route names. 
 
+// app.route('/student')
+//   .get((req,res)=>{
+//     res.send('All Students')
+//   })
+//   .post((req,res)=>{
+//     res.send('Add New Student')
+//   })
+//   .put((req,res)=>{
+//     res.send('Updated Student')
+//   })
+//   .delete((req,res)=>{
+//     res.send('Deleted Student')
+//   })
+
+// Another Example : 
+  app.route('/student')
+  .all((req,res)=>{
+    // runs for all HTTP verbs first
+  })
+  .get((req,res)=>{
+    res.send('All Students')
+  })
+  .post((req,res)=>{
+    res.send('Add New Student')
+  })
+  .put((req,res)=>{
+    res.send('Updated Student')
+  })
+  .delete((req,res)=>{
+    res.send('Deleted Student')
+  })
+
+// upore /student er moddhe get method ashleo upore .all() run hoye tarpor .get() run hobe. jodi /student er moddhe .post() method call hoy tao prothome .all() run hobe then .post() run hobe . tar mane jei method eii call hok na kno prothome .all() run hobe then sei method . 
+// tar mane amra ekhane validation er moto rakhte pari . or kichu restriction er jonno erokom routing korte pari 
 
 app.listen(port, ()=>{
   console.log(`Server start with http://localhost:${port}`)
