@@ -108,8 +108,10 @@ const port = process.env.PORT || '3000'
 
 // Another Example : 
   app.route('/student')
-  .all((req,res)=>{
+  .all((req,res,next)=>{
     // runs for all HTTP verbs first
+    console.log('run for all!')
+    next()
   })
   .get((req,res)=>{
     res.send('All Students')
