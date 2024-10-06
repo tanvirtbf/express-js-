@@ -28,6 +28,22 @@ const port = process.env.PORT || '3000'
 //   res.send('Find a')
 // }) // jekono route jekhane a symbol ache setateii ai callback hit hobe . jemon /fasd -- hit , /asdfsadf/fdssdf/dfd -- hit etc..
 
+// One Callback 
+// app.get('/',(req,res)=>{
+//   res.send('Hello World!')
+// })
+
+// Multiple Callback 
+app.get('/', (req,res,next)=>{
+  res.send('Hello Worldss!')
+  next()
+}, (req,res, next)=>{
+  console.log('Second Callback')
+  next()
+}, (req,res)=>{
+  console.log('final clg')
+})
+
 
 app.listen(port, ()=>{
   console.log(`Server start with http://localhost:${port}`)
