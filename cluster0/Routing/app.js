@@ -83,6 +83,7 @@ const port = process.env.PORT || '3000'
 // }
 // const callback4 = (req,res,next)=>{
 //   console.log('Fourth Callback')
+//   next()
 // }
 // app.get('/', [callback1,callback2,callback3,callback4], (req,res)=>{
 //   res.send('Combined!')
