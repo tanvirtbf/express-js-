@@ -14,3 +14,9 @@
 
 // Another Example : 
 // /train/:from-:to       // www.example.com/train/dhaka-coxbazar
+
+// Route Parameter with Regx(Regular Expression)
+// /student/:id([0-9]{2}) --- id hobe 0 theke 9 porjonto number and 2 ta digit er beshi hobe na
+// /product/order/:year/and/:month([a-z]) --- month er route string jate a theke z porjonto hoy
+
+
