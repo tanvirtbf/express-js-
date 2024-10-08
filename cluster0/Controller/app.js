@@ -1,12 +1,12 @@
 import express from 'express'
+import stu from './routes/studentRoutes.js'
 
 const app = express()
 
 const port = process.env.PORT || '3000'
 
-app.get('/',(req,res)=>{
-  res.send('HEllo World!')
-})
+app.use('/student',stu)
+
 
 app.listen(port, ()=>{
   console.log(`App Run With http://localhost:${port}`)
