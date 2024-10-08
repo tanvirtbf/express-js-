@@ -5,7 +5,12 @@ import { join } from 'path'
 const app = express()
 
 // Static Files
+
+// Without Virtual Path
 app.use(express.static(join(process.cwd(),'public')))
+
+// With Virtual Path
+app.use('/static',express.static(join(process.cwd(),'public')))
 
 app.use('/',home)
 
