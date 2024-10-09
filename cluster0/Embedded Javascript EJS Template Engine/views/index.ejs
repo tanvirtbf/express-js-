@@ -1,0 +1,48 @@
+  <%- include('./include/header.ejs') %>
+
+  <!-- Include Template -->
+  <%- include('./include/headingInclude.ejs') %>
+
+  <h1>EJS Template Engine</h1>
+  <h1>
+
+<!-- Displaying Variable Data -->
+    <%= name %>
+
+<!-- Creating Variable -->
+    <% var i = 10; %>
+    <!-- Display i -->
+    <%= i %>
+
+<!-- Comment -->
+    <%# Comment will not be present in the rendered HTML or DOM . tar mane dom er moddheo comment create hoy na %>
+
+<!-- if -->
+    <% if(name==='Sadia') { %>
+
+      Hello <%=name %>
+
+    <% } %>
+
+<!-- else if -->
+    <% if(name==='Tanvir'){ %>
+      Husband
+    <% } else if(name==='Sadia'){ %>
+      Wife
+    <% } else {%>
+      Unknown Name , and this is <%= name %>
+    <% } %>
+
+<!-- for loop -->
+    <% for(let i = 0; i<5; i++){ %>
+      Hello <%= i %>
+    <% } %>
+
+<!-- Function Call -->
+    <% var current = new Date(); %>
+    <%= current %>
+
+
+  </h1>
+
+  <%- include('./include/footer.ejs') %>
