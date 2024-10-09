@@ -12,6 +12,8 @@ const app = express()
 // setup the template engine to use
 // app.set('view engine','ejs') // kon template engine ami use korbo seta ullekh kora lage..
 
+app.use(express.static(join(process.cwd(),'public')))
+
 app.use('/',web)
 
 const port = process.env.PORT || '3000'
